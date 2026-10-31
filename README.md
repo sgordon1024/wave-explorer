@@ -1,6 +1,6 @@
 # Wave / A field guide to light
 
-A mobile-friendly, dependency-free electromagnetic spectrum explorer. Rotate a perspective-projected 3D field diagram, change frequency across 15 decades, compare seven presets, and explore wavelength and photon energy.
+A mobile-friendly, dependency-free electromagnetic spectrum explorer. Rotate perspective-projected 3D wavefronts or a field-probe volume, change frequency across 15 decades, compare seven presets, and explore wavelength and photon energy.
 
 ## Run
 
@@ -10,7 +10,11 @@ Run physics checks with `bun test.test.js` or `node test.test.js`.
 
 ## Model
 
-For propagation in +x, electric field Ey and magnetic field Bz share sin(kx−ωt). They are perpendicular, in phase, and independently normalized in the illustration (physical E = cB). The curves show fields along a line, not a photon trajectory. The display compresses log10(f) into 1–5 cycles and uses constant display phase velocity. Space and time scales vary across settings. It is a conceptual illustration, not a literal scale simulation.
+The default “How it spreads” view draws spherical equal-phase surfaces expanding from an idealized point source. It is a geometric guide, not a claim of physically isotropic EM emission or a full antenna solution. The continuous field exists between fronts; they are not material shells, separate pulses, or photon trajectories. A reference plane and outward arrows make the 3D geometry explicit. No atmosphere is required.
+
+“Fields at fixed points” shows a finite window through an ideal plane wave, with stationary probes throughout the volume. For propagation in +x, electric field Ey and magnetic field Bz share sin(kx−ωt). They are perpendicular, in phase, and independently normalized (physical E = cB). Every probe uses the same visual field scale; no string-like curve connects them. Translucent planes mark equal phase; the plane wave extends beyond the drawing window.
+
+The full-spectrum display compresses log10(f) into 0.8–1.5 display Hz, with a constant propagation speed of 1.2 display distance units per second. “Compare: double frequency” doubles both physical frequency and the current displayed frequency while preserving display scales, so front spacing halves and cadence doubles. Restoring returns to the original selected frequency. The comparison is disabled if doubling would exceed the global slider range. Manual frequency changes exit the fixed-scale comparison. Setting changes redraw a steady-state pattern, not a time-dependent frequency switch at the source.
 
 Physical readouts use exact SI c = 299792458 m/s, h = 6.62607015e−34 J s, elementary charge = 1.602176634e−19 C. λ = c/f; energy in eV = hf/e. Spectrum boundaries are conventional, and gamma/X-ray naming also depends on origin.
 

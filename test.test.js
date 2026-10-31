@@ -12,3 +12,10 @@ for(const [v,name] of [[[100,100,0],'Yellow mix'],[[100,0,100],'Magenta mix'],[[
 // A complete wavelength of travel returns the local field to the same shape.
 if(wavePath(550,0)!==wavePath(550,550))throw Error('field periodicity');
 console.log('PASS: visible frequency/energy ratios, spectral colors, RGB states, and fixed-scale wave periodicity');
+import {DISPLAY_SPEED,frontSpacing,frontRadii,fieldAt} from './fronts.js';
+close(frontSpacing(1)/frontSpacing(2),2);
+const a=frontRadii(.2,1),b=frontRadii(.3,1);close(b[0]-a[0],DISPLAY_SPEED*.1);
+const d=frontRadii(.2,2),e=frontRadii(.3,2);close(e[0]-d[0],DISPLAY_SPEED*.1);
+for(let i=1;i<a.length;i++)close(a[i]-a[i-1],frontSpacing(1));
+close(fieldAt(.23,.17,1),fieldAt(.23+DISPLAY_SPEED*.1,.27,1));
+console.log('PASS: frequency doubling halves phase-front spacing; front speed unchanged; plane-field phase travels at same speed');
