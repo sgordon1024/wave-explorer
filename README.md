@@ -29,3 +29,11 @@ Physical readouts use exact SI c = 299792458 m/s, h = 6.62607015e−34 J s, elem
 - [FDA: microwave ovens](https://www.fda.gov/radiation-emitting-products/resources-you-radiation-emitting-products/microwave-ovens)
 
 Designed for static GitHub Pages hosting from the main branch root.
+
+## Color perception lab
+
+The `#color` section adds a 400–700 nm visible-spectrum zoom connected to the main explorer, a fixed 1,400 nm field window, and an independent RGB channel mixer. The local field translates at 700 nm per displayed second, corresponding to about 2.34 femtoseconds of physical time per display second. Both animations share pause and reduced-motion behavior.
+
+Spectral colors are explicitly approximate display swatches interpolated between illustrative RGB anchors, not a color-matching-function calculation. RGB levels are screen channel code values, not cone responses or calibrated radiant power. Mixtures never receive a fictional average wavelength or photon energy. Source-selection buttons explain either a conceptual single-wavelength source or the RGB mixture; all actual screen patches use display primaries.
+
+Additional sources: [Stockman & Rider (2023), cone sensitivities](https://doi.org/10.1002/col.22879), [CIE observer metamerism](https://cie.co.at/publications/special-metamerism-index-change-observer), [Physics Classroom color addition](https://www.physicsclassroom.com/class/light/Lesson-2/Color-Addition).
